@@ -1,0 +1,83 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.FormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+
+.inputBox {
+  width: 500px;
+  padding: 0px;
+  background-color: #df024d;
+  border-radius: 2px;
+  border: 1px solid white;
+  height: 35px;
+  padding-left: 5px;
+  color: white;
+}
+.Button {
+  color: black;
+  width: 100%;
+  border-radius: 2px;
+  border: none;
+  height: 35px;
+  background-color: #fff;
+  -webkit-appearance: none;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 500;
+  margin-top: 8px;
+}
+.Label {
+  color: white;
+  margin-bottom: 8px;
+}
+
+h2 {
+  color: white;
+  font-size: 20px;
+}
+.SubmittedText {
+  text-align: center;
+  color: white;
+  white-space: nowrap;
+  font-weight: 400;
+}
+.Button:hover {
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+@media only screen and (max-width: 500px) {
+  h2 {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .Button {
+    color: black;
+    width: 350px;
+    border-radius: 2px;
+    border: none;
+    height: 35px;
+  }
+  .inputBox {
+    width: 350px;
+    padding: 0px;
+    background-color: #df024d;
+    border-radius: 2px;
+    border: 1px solid white;
+    height: 35px;
+    padding-left: 5px;
+    color: white;
+  }
+}
