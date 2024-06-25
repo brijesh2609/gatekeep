@@ -9,11 +9,12 @@ function SignUpForm() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const apiCall = async (e) => {
     try {
       e.preventDefault();
-
+      setIsSubmitting(true);
       ReactGA.event({
         category: "GateKeep",
         action: "FormSubmit",
@@ -38,6 +39,8 @@ function SignUpForm() {
       setSubmitted(true);
     } catch (err) {
       console.log("err>>>here", err);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -79,7 +82,7 @@ function SignUpForm() {
               </div>
             </div>
             <div>
-              <button className="Button" type="submit">
+              <button className="Button" type="submit" disabled={isSubmitting}>
                 SUBMIT
               </button>
             </div>
